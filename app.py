@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__, template_folder='frontend')
 
 def addData(connection, cursor):
-    csv_data = pd.read_csv('Books.csv', index_col=False, encoding="ISO-8859-1", dtype={
+    csv_data = pd.read_csv('https://raw.githubusercontent.com/yasseriz/crispy-octo-barnacle/main/Books.csv', index_col=False, encoding="ISO-8859-1", dtype={
                            "ISBN": str, "Book-Title": str, "Book-Author": str, "Year-Of-Publication": int, "Image-URL-L": str})
     # print(csv_data.head())
 
