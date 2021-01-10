@@ -13,3 +13,6 @@
 Backend - Python and Flask
 Frontend - HTML with Bootstrap
 Database and PaaS - DigitalOcean
+
+![output1](../main/media/DOHackathon-1.png)
+![output2](../main/media/DOHackathon-2.png)
