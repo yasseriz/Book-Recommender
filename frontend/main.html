@@ -14,8 +14,8 @@
     <h1 class="display-1 text-center">Random Book Recommender</h1>
 
     {% if result %}
-    <div class="container-fluid">
-      <h4 class="display-4 text-center">Book Name</h4>
+    <div class="container-fluid" style="margin: auto; width: fit-content;">
+      <!-- <h4 class="display-4 text-center">Book Name</h4>
       <h5 class="display-5 text-center">{{result[1]}}</h5>
 
       <h4 class="display-4 text-center">Author</h4>
@@ -23,7 +23,17 @@
 
       <h4 class="display-4 text-center">Year Published</h4>
       <h5 class="display-5 text-center">{{result[3]}}</h5>
-      <img src="{{result[4]}}">
+      <img src="{{result[4]}}"> -->
+
+      <div class="card text-dark bg-light mb-3" style="margin: auto; width: fit-content;">
+        <div class="card-header">Book Recommended</div>
+        <div class="card-body">
+          <h5 class="card-title">{{result[1]}}</h5>
+          <p class="card-text">{{result[2]}}</p>
+          <p class="card-text">{{result[3]}}</p>
+          <a href="{{result[4]}}" class="btn btn-primary">View book</a>
+        </div>
+      </div>
     </div>
     {% endif %}
 

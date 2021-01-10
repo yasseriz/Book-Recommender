@@ -48,12 +48,11 @@ except Error as e:
     print("Error reading data from MySQL table", e)
 finally:
     if (connection.is_connected()):
-
-        sql_select_Query = ("SELECT * FROM Book ORDER BY RAND() LIMIT 1")
-        cursor.execute(sql_select_Query)
-        result = cursor.fetchall()
-        for i in result:
-            print(i)
+        # sql_select_Query = ("SELECT * FROM Book ORDER BY RAND() LIMIT 1")
+        # cursor.execute(sql_select_Query)
+        # result = cursor.fetchall()
+        # for i in result:
+        #     print(i)
 
         # connection.close()
         cursor.close()
