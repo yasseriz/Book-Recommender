@@ -15,17 +15,18 @@
 
     {% if result %}
     <div class="container-fluid">
-      <h2 class="display-1 text-center">Book Name</h2>
-      <h3 class="display-1 text-center">{{result[1]}}</h3>
-      <h2 class="display-1 text-center">Author</h2>
-      <h3 class="display-1 text-center">{{result[2]}}</h3>
-      <img src={{result[4]}} class="img-fluid">
+      <h2 class="display-2 text-center">Book Name</h2>
+      <h3 class="display-3 text-center">{{result[1]}}</h3>
+
+      <h2 class="display-2 text-center">Author</h2>
+      <h3 class="display-3 text-center">{{result[2]}}</h3>
+      <img src="{{result[4]}}" class="img-fluid">
     </div>
     {% endif %}
 
 
     <form action="/" method="POST">
-        <button type="submit" class="btn btn-outline-primary btn-lg" style="margin:auto; display:block;">Recommend a random movie</button>
+        <button type="submit" class="btn btn-outline-primary btn-lg" style="margin:auto; display:block;">Recommend a random book</button>
     </form>
     
     <!-- Optional JavaScript; choose one of the two! -->
