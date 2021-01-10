@@ -46,13 +46,11 @@ try:
 
 except Error as e:
     print("Error reading data from MySQL table", e)
-    
-finally:
-    if (connection.is_connected()):
 
-        # connection.close()
+finally:
+    if (connection.is_connected()):dd
         cursor.close()
-        print("MySQL connection is closed")
+        print("MySQL cursor is closed")
 
 # Root URL
 @app.route('/', methods=['GET','POST'])
