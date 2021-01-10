@@ -48,7 +48,7 @@ except Error as e:
     print("Error reading data from MySQL table", e)
 
 finally:
-    if (connection.is_connected()):dd
+    if (connection.is_connected()):
         cursor.close()
         print("MySQL cursor is closed")
 
