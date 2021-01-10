@@ -37,8 +37,8 @@ try:
 
         cursor.execute('DROP TABLE IF EXISTS Book')
 
-        sql_select_Query = "create TABLE Book(ISBN varchar(15) NOT NULL, Book varchar(100) NOT NULL, Author varchar(50) NOT NULL, Year int unsigned, Image varchar(100), PRIMARY KEY(ISBN)) "
-        cursor.execute(sql_select_Query)
+        sql_create_Query = "create TABLE Book(ISBN varchar(15) NOT NULL, Book varchar(100) NOT NULL, Author varchar(50) NOT NULL, Year int unsigned, Image varchar(100), PRIMARY KEY(ISBN)) "
+        cursor.execute(sql_create_Query)
         print("Book table created")
 
         addData(connection, cursor)
@@ -64,8 +64,8 @@ finally:
 def home():
     if request.method =="POST":
         result = randomMovie(cursor)
-        print(type(result))
         return render_template('main.html', result=result)
+
     return render_template('main.html')
 
 # if (__name__ == "__main__"):
