@@ -10,8 +10,8 @@
 5. Push changes and let DigitalOcean take it from there!
 
 # Tech used
-Backend - Python and Flask
-Frontend - HTML with Bootstrap
+Backend - Python and Flask \
+Frontend - HTML with Bootstrap \
 Database and PaaS - DigitalOcean
 
 ![output1](../main/media/DOHackathon-1.png)
