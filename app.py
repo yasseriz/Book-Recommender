@@ -46,13 +46,9 @@ try:
 
 except Error as e:
     print("Error reading data from MySQL table", e)
+    
 finally:
     if (connection.is_connected()):
-        # sql_select_Query = ("SELECT * FROM Book ORDER BY RAND() LIMIT 1")
-        # cursor.execute(sql_select_Query)
-        # result = cursor.fetchall()
-        # for i in result:
-        #     print(i)
 
         # connection.close()
         cursor.close()
@@ -66,6 +62,3 @@ def home():
         return render_template('main.html', result=result)
 
     return render_template('main.html')
-
-# if (__name__ == "__main__"):
-#      app.run(port = 5000)
