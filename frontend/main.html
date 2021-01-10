@@ -11,11 +11,16 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1 class="display-1 text-center">Random Movie Recommender</h1>
-    <h1 class="display-1 text-center">{{test}}</h1>
+    <h1 class="display-1 text-center">Random Book Recommender</h1>
 
     {% if result %}
-    <h1 class="display-1 text-center">{{result[1]}}</h1>
+    <div class="container-fluid">
+      <h2 class="display-1 text-center">Book Name</h2>
+      <h3 class="display-1 text-center">{{result[1]}}</h3>
+      <h2 class="display-1 text-center">Author</h2>
+      <h3 class="display-1 text-center">{{result[2]}}</h3>
+      <img src={{result[4]}} class="img-fluid">
+    </div>
     {% endif %}
 
 

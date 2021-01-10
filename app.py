@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 import mysql.connector
 from mysql.connector import Error
 import pandas as pd
@@ -32,8 +32,8 @@ try:
     if connection.is_connected():
         cursor = connection.cursor()
         cursor.execute("select database();")
-        records = cursor.fetchone()
-        print("Connected to database:", records)
+        record = cursor.fetchone()
+        print("Connected to database:", record)
 
         cursor.execute('DROP TABLE IF EXISTS Book')
 
@@ -62,12 +62,11 @@ finally:
 # Root URL
 @app.route('/', methods=['GET','POST'])
 def home():
-    test="test"
     if request.method =="POST":
         result = randomMovie(cursor)
         print(type(result))
-        return render_template('main.html', test=test, result=result)
-    return render_template('main.html', test=test)
+        return render_template('main.html', result=result)
+    return render_template('main.html')
 
 # if (__name__ == "__main__"):
 #      app.run(port = 5000)
