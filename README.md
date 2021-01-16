@@ -2,6 +2,8 @@
 
 [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/yasseriz/Book-Recommender/tree/main)
 
+Check out the article on the project [here](https://dev.to/yasseriz/random-book-recommender-digitalocean-app-platform-hackathon-4aji)
+
 # Getting started
 1. Fork repo
 2. Use pipenv to install the package requirements.
